@@ -1,7 +1,7 @@
 const { writeFileSync } = require("fs");
 
 const result = [
-  "CANARY=CANARY_SEEN",
+  "CANARY=FORK_PR2_CANARY_SEEN",
   `HAS_GITHUB_TOKEN=${Boolean(process.env.GITHUB_TOKEN)}`,
   `HAS_GH_TOKEN=${Boolean(process.env.GH_TOKEN)}`,
   `HAS_OIDC_URL=${Boolean(process.env.ACTIONS_ID_TOKEN_REQUEST_URL)}`,
