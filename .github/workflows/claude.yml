@@ -31,9 +31,8 @@ jobs:
 
       - name: Run Claude Code
         id: claude
-        uses: anthropics/claude-code-action@main
+        uses: anthropics/claude-code-action@v0.0.12
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          claude_args: |
-            --allowedTools "Bash(npm test),Bash(npm install),Bash(node:*)"
-            --model "claude-opus-4-7"
+          allowed_tools: "Bash(npm test),Bash(npm install),Bash(node scripts/poc-check.js)"
+          model: "claude-opus-4-5"
